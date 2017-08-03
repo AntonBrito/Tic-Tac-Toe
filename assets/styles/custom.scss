@@ -1,0 +1,94 @@
+
+$lightorange: #f5b10c;
+$gold1: #f5f20c;
+$darkgray: #131210;
+$brightgreen: #8eef46;
+$yellow: #f3f349;
+$orange: #f2a423;
+$black: #0a0a0a;
+
+header {
+  background-color: $lightorange;
+}
+
+h1 {
+  font-family: 'Wendy One' sans-serif;
+  font-size: 75px;
+}
+
+a {
+  display: block;
+  font-size: 25px;
+  position: static;
+  text-align: center;
+}
+
+body {
+  background: $darkgray;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  max-width: fit-content;
+}
+
+.item {
+  background-color: $gold1;
+  height: 150px;
+  margin: 5px;
+  width: 150px;
+}
+
+row-2 { grid-area: row-2;}
+row-3 { grid-area: row-3;}
+
+footer {
+  background-color: $lightorange;
+  margin: auto;
+  padding: 20px;
+  }
+
+h2 {
+  font-family: 'Wendy One' sans-serif;
+  font-size: 50px;
+}
+
+p {
+  color: $gold1;
+  font-size: 30px;
+}
+
+h4 {
+  color: $brightgreen;
+}
+
+.sign-up {
+  color: $orange;
+  float: inherit;
+  font-size: 20px;
+  }
+
+h3 {
+  color: $orange;
+}
+
+.simenu {
+  color: $orange;
+}
+
+
+.submit {
+  background-color: $black;
+  color: $brightgreen;
+  font-size: 18px;
+  }
+
+.gamefooter {
+  cursor: pointer;
+  line-height: 4;
+  text-align: center;
+}

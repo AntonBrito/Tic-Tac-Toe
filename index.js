@@ -131,7 +131,7 @@ function checkFull(board)
     return true;
 }
 
-function callAI(
+function callAI
 {
 
   aiturn(state, 0, COMPUTER);

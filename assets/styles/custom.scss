@@ -16,12 +16,12 @@ h1 {
   font-size: 75px;
 }
 
-a {
-  display: block;
-  font-size: 25px;
-  position: static;
-  text-align: center;
-}
+// a {
+//   display: block;
+//   font-size: 25px;
+//   position: static;
+//   text-align: center;
+// }
 
 body {
   background: $darkgray;
@@ -43,12 +43,13 @@ body {
   padding-top: 25vh;
   width: 100%;
 }
-board {
-  padding: 0;
-  margin: auto;
-  width: 33vh;
+
+#board {
   height: 33vh;
-}
+  margin: auto;
+  padding: 0;
+  width: 33vh;
+  }
 
 .item {
   background-color: $gold1;

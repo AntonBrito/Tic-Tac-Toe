@@ -133,7 +133,9 @@ function checkFull(board)
 
 function callAI(
 {
-    aiturn(state, 0, COMPUTER);
+
+  aiturn(state, 0, COMPUTER);
+
 }
   function aiturn(board.depth.player)
   {

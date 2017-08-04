@@ -30,27 +30,29 @@
       </header>
       <br>
       <br>
-    <main>
-    <div class="grid-container">
-      <div class="row a">
-        <div class="item 0 item"> </div>
-        <div class="item 1 item"> </div>
-        <div class="item 2 item"> </div>
+    <div class="main">
+    <div id="board">
+      <div id="rowa" class="row">
+        <div class="item" id="item0" onclick="claim(this)"> </div>
+        <div class="item" id="item1" onclick="claim(this)"> </div>
+        <div class="item" id="item2" onclick="claim(this)"> </div>
       </div>
-      <div class="row b">
-        <div class="item 3 item"> </div>
-        <div class="item 4 item"> </div>
-        <div class="item 5 item"> </div>
+      <div id="rowb" class="row">
+        <div class="item" id="item3" onclick="claim(this)"> </div>
+        <div class="item" id="item4" onclick="claim(this)"> </div>
+        <div class="item" id="item5" onclick="claim(this)"></div>
       </div>
-      <div class="row c">
-        <div class="item 6 item"> </div>
-        <div class="item 7 item"> </div>
-        <div class="item 8 item"> </div>
+      <div id="rowc" class="row">
+        <div class="item" id="item6" onclick="claim(this)"> </div>
+        <div class="item" id="item7" onclick="claim(this)"> </div>
+        <div class="item" id="item8" onclick="claim(this)"> </div>
+
+        <div class="button" onclick="callAI()">Computer</div>
+        <div class="button" onclick="reset()">Reset</div>
       </div>
-      <div class="gamefooter"></div>
-      <div id="debug"></div>
+     <!-- <div class="gamefooter"></div> -->
+      </div> -->
     </div>
-    </main>
     <br>
     <br>
 

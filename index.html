@@ -15,12 +15,10 @@
     <body class="container-fluid">
 
       <header>
-        <h1>Tic Tac Toe</h1>
-
+        <h1>Tic Tac Toe </h1>
+        <div class="sign-in simenu">
         <form>
-
-          <div class="sign-in simenu">
-            <h3>Sign In</h3>
+          <h3>Sign In</h3>
             Username:<br>
             <input type="text" name="username" value="" />
             <br>
@@ -28,39 +26,45 @@
             <input type="text" name="password" value="" />
             <br>
             <br>
-            <input type="submit" value="Lets Play" class="submit">
-          </div>
-       </form>
+            <input type="submit" value="Lets Play" class="submit"/>
+        </form>
+        </div>
 
       </header>
-      <br>
-      <br>
-    <div class="main">
-    <div class="board">
-      <div id="rowa" class="row">
-        <div class="item" id="item0" onclick="claim(this)"> </div>
-        <div class="item" id="item1" onclick="claim(this)"> </div>
-        <div class="item" id="item2" onclick="claim(this)"> </div>
-      </div>
-      <div id="rowb" class="row">
-        <div class="item" id="item3" onclick="claim(this)"> </div>
-        <div class="item" id="item4" onclick="claim(this)"> </div>
-        <div class="item" id="item5" onclick="claim(this)"></div>
-      </div>
-      <div id="rowc" class="row">
-        <div class="item" id="item6" onclick="claim(this)"> </div>
-        <div class="item" id="item7" onclick="claim(this)"> </div>
-        <div class="item" id="item8" onclick="claim(this)"> </div>
 
-        <!-- <div class="button" onclick="callAI()">Computer</div>
-        <div class="button" onclick="reset()">Reset</div> -->
-      </div>
+      <br> <br>
+      <div class="container-fluid border">
+      <div class="game">
 
-      </div>
-    </div>
+        <table id="gametable" align="center">
+
+            <tr>
+              <td id="0item" class="cell"></td>
+              <td id="1item" class="cell"></td>
+              <td id="2item" class="cell"></td>
+            </tr>
+
+            <tr>
+              <td id="3item" class="cell"></td>
+              <td id="4item" class="cell"></td>
+              <td id="5item" class="cell">
+              </td>
+            </tr>
+
+            <tr>
+              <td id="6item" class="cell"></td>
+              <td id="7item" class="cell"></td>
+              <td id="8item" class="cell"></td>
+            </tr>
+          </table>
+          </div>
+        </div>
     <br>
-    <br>
 
+
+    <input type="reset" class="resetGame" />
+    <!-- onclick=reset()>Reset -->
+<br><br>
     <footer>
 
           <h6>CopyRight@2017 Design by Antonio Brito</h6>

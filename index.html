@@ -16,23 +16,48 @@
 
       <header>
         <h1>Tic Tac Toe </h1>
+
         <div class="sign-in simenu">
         <form>
-          <h3>Sign In</h3>
+          <h2>Sign In</h2>
             Username:<br>
             <input type="text" name="username" value="" />
             <br>
             Password:<br>
             <input type="text" name="password" value="" />
             <br>
+            <input type="submit" value="sign-in" class="submit"/>
+        </form>
+        </div>
+        <div class="sign-up simenu">
+        <form>
+          <div class="sigsec">
+          <h2>Sign up</h2>
+            Email:<br>
+            <input type="text" name="email" value="" />
             <br>
-            <input type="submit" value="Lets Play" class="submit"/>
+            Username:<br>
+            <input type="text" name="username" value="" />
+            <br>
+            Password:<br>
+            <input type="text" name="password" value="" />
+            <br>
+          </div>
+            <input type="submit" value="sign-up" class="submit sigfirst"/>
         </form>
         </div>
 
       </header>
+      <div class="wins">
+      <div id="player1">
+      <h3>Player1</h3>
+      </div>
+      <div id="player2">
+      <h3>Player2</h3>
+      </div>
+      </div>
 
-      <br> <br>
+      <br>
       <div class="container-fluid border">
       <div class="game">
 
@@ -60,15 +85,11 @@
           </div>
         </div>
     <br>
-
-
-    <input type="reset" class="resetGame" />
+    <button type="reset" class="resetGame" value="NEW GAME">RESET</button>
     <!-- onclick=reset()>Reset -->
-<br><br>
+    <br><br>
     <footer>
-
-          <h6>CopyRight@2017 Design by Antonio Brito</h6>
-
+      <h6>CopyRight@2017 Design by Antonio Brito</h6>
     </footer>
 
     </body>

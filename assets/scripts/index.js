@@ -13,21 +13,73 @@ $(() => {
 // use require without a reference to ensure a file is bundled
 require('./example')
 
+let over
 
-module.exports = {
-
+const checkForWin = function () {
+  if ($('#0item').html() === 'x' && $('#1item').html() === 'x' && $('#2item').html() === 'x') {
+    document.getElemntById('palyer1').innerHTML = 'Nice'
+    over = true
+  } else if ($('#3item').html() === 'x' && $('#4item').html() === 'x' && $('#5item').html() === 'x') {
+    console.log('x wins')
+    over = true
+  } else if ($('#6item').html() === 'x' && $('#7item').html() === 'x' && $('#8item').html() === 'x') {
+    console.log('x wins')
+    over = true
+  } else if ($('#0item').html() === 'o' && $('#1item').html() === 'o' && $('#2item').html() === 'o') {
+    console.log('o wins')
+    over = true
+  } else if ($('#3item').html() === 'o' && $('#4item').html() === 'o' && $('#5item').html() === 'o') {
+    console.log('o wins')
+    over = true
+  } else if ($('#6item').html() === 'o' && $('#7item').html() === 'o' && $('#8item').html() === 'o') {
+    console.log('o wins')
+    over = true
+  } else if ($('#0item').html() === 'x' && $('#4item').html() === 'x' && $('#8item').html() === 'x') {
+    console.log('x wins')
+    over = true
+  } else if ($('#2item').html() === 'x' && $('#4item').html() === 'x' && $('#6item').html() === 'x') {
+    console.log('x wins')
+    over = true
+  } else if ($('#0item').html() === 'o' && $('#4item').html() === 'o' && $('#8item').html() === 'o') {
+    console.log('o wins')
+    over = true
+  } else if ($('#2item').html() === 'o' && $('#4item').html() === 'o' && $('#6item').html() === 'o') {
+    console.log('o wins')
+    over = true
+  } else if ($('#0item').html() === 'x' && $('#3item').html() === 'x' && $('#6item').html() === 'x') {
+    console.log('x wins')
+    over = true
+  } else if ($('#1item').html() === 'x' && $('#4item').html() === 'x' && $('#7item').html() === 'x') {
+    console.log('x wins')
+    over = true
+  } else if ($('#2item').html() === 'x' && $('#5item').html() === 'x' && $('#8item').html() === 'x') {
+    console.log('x wins')
+    over = true
+  } else if ($('#0item').html() === 'o' && $('#3item').html() === 'o' && $('#6item').html() === 'o') {
+    console.log('o wins')
+    over = true
+  } else if ($('#1item').html() === 'o' && $('#4item').html() === 'o' && $('#7item').html() === 'o') {
+    console.log('o wins')
+    over = true
+  } else if ($('#2item').html() === 'o' && $('#5item').html() === 'o' && $('#8item').html() === 'o') {
+    console.log('o wins')
+    over = true
+  }
 }
 
-$(function () {
-
+const runGame = function () {
   const myBoard = []
-  const players = ['X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-  const item = [ '0item', '1item', '2item', '3item', '4item', '5item', '6item', '7item', '8item' ]
+  const players = ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'o', 'x']
+  const item = ['0item', '1item', '2item', '3item', '4item', '5item', '6item', '7item', '8item']
   const myboard = ['', '', '']
 
+  // TODO add to sigin call back
+  // function sig () {
+  //   $('.sigfirst').hide();
+  //   $('.sigsec').fadeIn(1000);
   let player = 1
   // const player2 = o
-  $('td').on('click', function () {
+  $('.cell').on('click', function () {
     if (player === 1) {
       $(this).html('x')
     } else {
@@ -35,30 +87,24 @@ $(function () {
     }
     let turn = setPlayer(player)
     player = turn
-    checkHorizontal()
+    checkForWin()
   })
   // switchPlayer
-  function setPlayer(player) {
+  function setPlayer (player) {
     if (player === 1) {
       return 2
     } else {
       return 1
     }
   }
-
-  function checkforWin () {
-    //  if check
-  }
-  // function checkDiagun()
-  // function checkVertical()
-  let over
-
-  function checkHorizontal () {
-    if ($('#0item').html() === 'x' && $('#1item').html() === 'x' && $('#2item').html() === 'x') {
-      console.log('x wins')
-
-    }
-
-  }
-
+}
+$(function restart () {
+  $('.resetGame').on('click', function (event) {
+    runGame()
+    $('.cell').html(' ')
+  })
 })
+
+module.exports = {
+  runGame
+}

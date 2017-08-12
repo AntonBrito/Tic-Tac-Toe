@@ -31,6 +31,16 @@ body {
   width: 100px;
 }
 
+.x {
+  color: $orange;
+  font-size: 30px;
+  }
+
+.wins {
+  color: $brightgreen;
+  font-size: 15px;
+  text-align: left;
+}
 
 
 .game {
@@ -45,16 +55,16 @@ body {
 }
 
 button {
-  background: $brightgreen;
+  background: $lightorange;
   border-radius: 5px;
   cursor: pointer;
-  // float: left;
   height: 5vh;
   line-height: 5vh;
   margin: .5vh;
   padding: 0;
   text-align: center;
   vertical-align: middle;
+  width: 65px;
 }
 
 row-2 {
@@ -72,9 +82,10 @@ footer {
 }
 
 h2 {
+  color: $black;
   font-family: 'Wendy One' sans-serif;
-  font-size: 50px;
-}
+  font-size: 30px;
+  }
 
 p {
   color: $gold1;
@@ -96,7 +107,9 @@ h3 {
 }
 
 .simenu {
-  color: $brightgreen;
+  color: $black;
+  font-size: 20px;
+  text-align: left;
 }
 
 .submit {

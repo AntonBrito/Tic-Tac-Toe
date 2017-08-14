@@ -15,49 +15,76 @@
     <body class="container-fluid">
 
       <header>
-        <h1>Tic Tac Toe</h1>
+        <h1>Tic Tac Toe </h1>
 
-        <ul>
-          <li>
-            <a href="mainpage.html">HOME</a>
-          </li>
-
-          <li>
-            <a href="about.index">About TicTacToe</a>
-          </li>
-       </ul>
+        <div class="sign-in simenu">
+          <form id="sign-up">
+            <input type="text" name="credentials[email]" value="" placeholder="email">
+            <input type="password" name="credentials[password]" value="" placeholder="password">
+            <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+            <input type="submit" name="submit" value="Sign up!" class="submit">
+        </form>
+        <form id="sign-in">
+            <input type="text" name="credentials[email]" value="" placeholder="email">
+            <input type="password" name="credentials[password]" value="" placeholder="password">
+            <input type="submit" name="submit" value="Sign in!" class="submit">
+        </form>
+        <form id="sign-out">
+            <input type="submit" name="submit" value="Sign out!" class="submit">
+        </form>
+        <form id="change-password">
+            <input type="password" name="credentials[old]" value="" placeholder="Old Password">
+            <input type="password" name="credentials[new]" value="" placeholder="New Password">
+            <input type="submit" name="submit" value="Change Password" class="submit">
+        </form>
+        </div>
 
       </header>
-      <br>
-      <br>
-    <main>
-    <div class="grid-container">
-      <div class="row a">
-        <div class="item 0 item"> </div>
-        <div class="item 1 item"> </div>
-        <div class="item 2 item"> </div>
+      <div class="wins">
+      <div id="player1">
+      <h3>Player1</h3>
       </div>
-      <div class="row b">
-        <div class="item 3 item"> </div>
-        <div class="item 4 item"> </div>
-        <div class="item 5 item"> </div>
+      <div id="player2">
+      <h3>Player2</h3>
       </div>
-      <div class="row c">
-        <div class="item 6 item"> </div>
-        <div class="item 7 item"> </div>
-        <div class="item 8 item"> </div>
       </div>
-      <div class="gamefooter"></div>
-      <div id="debug"></div>
-    </div>
-    </main>
-    <br>
-    <br>
 
+
+      <br>
+      <div class="container-fluid border">
+      <div class="game">
+        <p class="message">Who Will Win?</p>
+
+ <table id="gametable" align="center">
+
+
+            <tr>
+              <td id="0item" class="cell"></td>
+              <td id="1item" class="cell"></td>
+              <td id="2item" class="cell"></td>
+            </tr>
+
+            <tr>
+              <td id="3item" class="cell"></td>
+              <td id="4item" class="cell"></td>
+              <td id="5item" class="cell">
+              </td>
+            </tr>
+
+            <tr>
+              <td id="6item" class="cell"></td>
+              <td id="7item" class="cell"></td>
+              <td id="8item" class="cell"></td>
+            </tr>
+          </table>
+          </div>
+        </div>
+    <br>
+    <button id="newgame" type="reset" class="resetgame hide" value="NEW GAME">PlayGame</button>
+    <!-- onclick=reset()>Reset -->
+    <br><br>
     <footer>
-
-          <h6>CopyRight@2017 Design by Antonio Brito</h6>
-
+      <h6>CopyRight@2017 Design by Antonio Brito</h6>
     </footer>
 
     </body>

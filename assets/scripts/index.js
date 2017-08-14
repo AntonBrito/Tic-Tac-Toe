@@ -121,6 +121,8 @@ const runGame = function () {
   }
 }
 
+// every box has o or x game = draw
+
 $(function restart () {
   $('#newgame').on('click', function (event) {
     runGame()

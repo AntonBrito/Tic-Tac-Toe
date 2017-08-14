@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>TicTacToe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+
+      <header>
+        <h1>Tic Tac Toe </h1>
+
+        <div class="sign-in simenu">
+          <form id="sign-up">
+            <input type="text" name="credentials[email]" value="" placeholder="email">
+            <input type="password" name="credentials[password]" value="" placeholder="password">
+            <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+            <input type="submit" name="submit" value="Sign up!" class="submit">
+        </form>
+        <form id="sign-in">
+            <input type="text" name="credentials[email]" value="" placeholder="email">
+            <input type="password" name="credentials[password]" value="" placeholder="password">
+            <input type="submit" name="submit" value="Sign in!" class="submit">
+        </form>
+        <form id="sign-out">
+            <input type="submit" name="submit" value="Sign out!" class="submit">
+        </form>
+        <form id="change-password">
+            <input type="password" name="credentials[old]" value="" placeholder="Old Password">
+            <input type="password" name="credentials[new]" value="" placeholder="New Password">
+            <input type="submit" name="submit" value="Change Password" class="submit">
+        </form>
+        </div>
+
+      </header>
+      <div class="wins">
+      <div id="player1">
+      <h3>Player1</h3>
+      </div>
+      <div id="player2">
+      <h3>Player2</h3>
+      </div>
+      </div>
+
+
+      <br>
+      <div class="container-fluid border">
+      <div class="game">
+        <p class="message">Who Will Win?</p>
+
+ <table id="gametable" align="center">
+
+
+            <tr>
+              <td id="0item" class="cell"></td>
+              <td id="1item" class="cell"></td>
+              <td id="2item" class="cell"></td>
+            </tr>
+
+            <tr>
+              <td id="3item" class="cell"></td>
+              <td id="4item" class="cell"></td>
+              <td id="5item" class="cell">
+              </td>
+            </tr>
+
+            <tr>
+              <td id="6item" class="cell"></td>
+              <td id="7item" class="cell"></td>
+              <td id="8item" class="cell"></td>
+            </tr>
+          </table>
+          </div>
+        </div>
+    <br>
+    <button id="newgame" type="reset" class="resetgame hide" value="NEW GAME">PlayGame</button>
+    <!-- onclick=reset()>Reset -->
+    <br><br>
+    <footer>
+      <h6>CopyRight@2017 Design by Antonio Brito</h6>
+    </footer>
+
+    </body>
+</html>

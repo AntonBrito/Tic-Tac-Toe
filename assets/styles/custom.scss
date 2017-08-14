@@ -51,7 +51,11 @@ body {
   color: $brightgreen;
   font-size: 20px;
   text-align: center;
-  width: 80px;
+  width: 150px;
+}
+
+.hide {
+  display: none;
 }
 
 button {
@@ -64,7 +68,7 @@ button {
   padding: 0;
   text-align: center;
   vertical-align: middle;
-  width: 65px;
+  width: 75px;
 }
 
 row-2 {

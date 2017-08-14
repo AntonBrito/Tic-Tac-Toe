@@ -18,32 +18,24 @@
         <h1>Tic Tac Toe </h1>
 
         <div class="sign-in simenu">
-        <form>
-          <h2>Sign In</h2>
-            Username:<br>
-            <input type="text" name="username" value="" />
-            <br>
-            Password:<br>
-            <input type="text" name="password" value="" />
-            <br>
-            <input type="submit" value="sign-in" class="submit"/>
+          <form id="sign-up">
+            <input type="text" name="credentials[email]" value="" placeholder="email">
+            <input type="password" name="credentials[password]" value="" placeholder="password">
+            <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+            <input type="submit" name="submit" value="Sign up!" class="submit">
         </form>
-        </div>
-        <div class="sign-up simenu">
-        <form>
-          <div class="sigsec">
-          <h2>Sign up</h2>
-            Email:<br>
-            <input type="text" name="email" value="" />
-            <br>
-            Username:<br>
-            <input type="text" name="username" value="" />
-            <br>
-            Password:<br>
-            <input type="text" name="password" value="" />
-            <br>
-          </div>
-            <input type="submit" value="sign-up" class="submit sigfirst"/>
+        <form id="sign-in">
+            <input type="text" name="credentials[email]" value="" placeholder="email">
+            <input type="password" name="credentials[password]" value="" placeholder="password">
+            <input type="submit" name="submit" value="Sign in!" class="submit">
+        </form>
+        <form id="sign-out">
+            <input type="submit" name="submit" value="Sign out!" class="submit">
+        </form>
+        <form id="change-password">
+            <input type="password" name="credentials[old]" value="" placeholder="Old Password">
+            <input type="password" name="credentials[new]" value="" placeholder="New Password">
+            <input type="submit" name="submit" value="Change Password" class="submit">
         </form>
         </div>
 
@@ -57,11 +49,14 @@
       </div>
       </div>
 
+
       <br>
       <div class="container-fluid border">
       <div class="game">
+        <p class="message">Who Will Win?</p>
 
-        <table id="gametable" align="center">
+ <table id="gametable" align="center">
+
 
             <tr>
               <td id="0item" class="cell"></td>
@@ -85,7 +80,7 @@
           </div>
         </div>
     <br>
-    <button type="reset" class="resetGame" value="NEW GAME">RESET</button>
+    <button id="newgame" type="reset" class="resetgame hide" value="NEW GAME">PlayGame</button>
     <!-- onclick=reset()>Reset -->
     <br><br>
     <footer>

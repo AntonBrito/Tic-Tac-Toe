@@ -1,104 +1,75 @@
-const app = require('..app.js')
+'use strict'
 
-//api call for registration
+const app = require('./../app')
+// const getFormFields = require('../../../lib/get-form-fields.js');
 
-const addUser = function (data) {
-  // console.log(data)
+// authApi.signUp(authUi.success, authUi.failure, data);
+
+const signUp = function (data) {
+  console.log(data)
   return $.ajax({
-    url: app.host + '/sign-up/'
-    // headers: { 'header': 'Content-Type: application/json' },
-    method: 'Post',
-    data: {
+    url: app.host + '/sign-up/',
+    method: 'POST',
+    data: { // this are the datas
       'credentials': {
         'email': data.credentials.email,
         'password': data.credentials.password,
-        'password_confirmation': data.credentials.password
+        'password_comfirmation': data.credentials.password
       }
     }
-    //crossDomain: true
   })
 }
 
-//api call for logging in suser
-const userLogin = function (data) {
-  /* let userInfo = {
-  hello : "Hello World"
-} */
-// console.log(userInfo)
-// console.log(data)
-return $.ajax({
-  url: app.host + '/sign-in/',
-  method: 'Post',
-  data: {
-    'credentials': {
-      'email': data.credentials.email,
-      'password': data.credentials.password
-    }
-  }
-
-}
-})
-}
-
-//api call for resetting password
-
-const passwordReset = function (data) {
-  console.log(app.user.token)
-  //console.log(data)
+const signIn = function (data) {
+  console.log(data)
   return $.ajax({
+    url: app.host + '/sign-in/',
+    method: 'POST',
+    data
+  })
+}
+
+const signOut = function () {
+  return $.ajax({
+    method: 'DELETE',
+    url: app.host + '/sign-out/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const changePassword = function (data) {
+  console.log(data.credentials.old)
+  console.log(data.credentials.new)
+  return $.ajax({
+    method: 'PATCH',
     url: app.host + '/change-password/' + app.user.id,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
-    method: 'PATCH',
-    data /* : {
-      "passwords": {
-      "old": data.passwords.old,
-      "new": data.passwords.new
+    data: {
+      'passwords': {
+        'old': data.credentials.old,
+        'new': data.credentials.new
+      }
     }
-  } */
   })
 }
-
-// api calls for logging in
-
-const userLogout = function () {
-  // console.log('something')
+const createGame = (data) => {
+  console.log(data)
   return $.ajax({
-    url: app.host + '/sign-out/' + app.user.id,
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    },
-    method: 'Delete'
-  })
-}
-
-// api call for starting a new gametable
-const getGame = function () {
-  // console.log ("Hello")
-  console.log(app.user.token)
-  return $.ajax({
-    url: app.host + '/games',
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    },
+    url: app.host + '/games/',
     method: 'POST',
-    success: function (response) {
-      console.log(response)
+    headers: {
+      Authorization: 'Token token=' + app.user.token
     }
-
-
   })
 }
-
-//event handler for adding moves to game object
-
-const updateMoves = function (index, value, over) {
-  console.log(app.user.token)
+const updateGame = (index, val, over) => {
   return $.ajax({
-    url: app.host + '/game/' + app.game.id,
+    url: app.host + '/games/' + app.game.id,
     method: 'PATCH',
-    // dataType
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -106,35 +77,28 @@ const updateMoves = function (index, value, over) {
       'game': {
         'cell': {
           'index': index,
-          'value': value
+          'value': val
         },
-        'over':over
+        'over': over
       }
     }
   })
 }
-// event handler-view game by user
-
-const gameView = function () {
-  console.log(app.user.token)
+const getHistory = (data) => {
   return $.ajax({
-    url: app.host + '/games',
+    url: app.host + '/games?over=true',
     method: 'GET',
     headers: {
-      Authorization: 'Token token=' + app.user.token
+      Authorization: 'Token token' + app.user.token
     }
   })
 }
-
-
-
-
 module.exports = {
-  addUser,
-  userLogin,
-  passwordReset,
-  userLogout,
-  getGame,
-  updateMoves,
-  gameView
+  signUp,
+  signIn,
+  signOut,
+  changePassword,
+  createGame,
+  updateGame,
+  getHistory
 }
